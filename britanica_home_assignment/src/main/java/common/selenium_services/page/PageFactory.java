@@ -33,6 +33,8 @@ public final class PageFactory implements PageVerifiable {
         SUPERMARKET(SupermarketPage.class, true),
         SEARCH(SearchPage.class, true),
         MILK_RESULTS(MilkResultsPage.class, true),
+        REMOVE_FROM_CART(RemoveFromCartPage.class, false),
+
         CART(CartPage.class, true),
         CONNECT (ConnectPage.class, false);
 

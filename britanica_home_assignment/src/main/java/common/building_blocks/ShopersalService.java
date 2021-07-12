@@ -29,6 +29,9 @@ public class ShopersalService {
 
     private CartPage cartPage;
 
+    private RemoveFromCartPage removeFromCartPage;
+
+
 
     private ShopersalService() {
         // Avoid reflection calls on Singleton(
@@ -86,6 +89,11 @@ public class ShopersalService {
     public void verifyCart(Float expectedPrice) {
         cartPage = pageFactory.createPage(PageFactory.Page.CART);
         cartPage.verifyCartPrice(expectedPrice);
+    }
+
+    public void removeFromCart() {
+        removeFromCartPage = pageFactory.createPage(PageFactory.Page.REMOVE_FROM_CART);
+        removeFromCartPage.removeFromCart();
     }
 
 

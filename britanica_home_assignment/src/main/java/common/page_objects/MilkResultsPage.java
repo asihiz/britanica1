@@ -11,18 +11,9 @@ import org.openqa.selenium.WebElement;
 
 public class MilkResultsPage implements Pageable , Preparable, Verifiable {
 
-    //    private static final By RESULT_SORT_BY_DDL = By.linkText("מיין לפי:");
     private static final By RESULT_SORT_BY_DDL = By.xpath("//*[@id=\"sortForm1\"]/div/button/span[1]");
     private static final By RESULT_ITEM = By.className("text");
-//private static final By ADD_TO_CART_ITEM = By.xpath("//p*[@id=\"mainProductGrid\"]/li[1]/div[1]/div[4]/button[1]");
-private static final By ADD_TO_CART_ITEM = By.className("js-add-to-cart");
-
-    private static final By PRICE_ITEM = By.className("number");
-    private static final By SHIPPING_FEE = By.className("infoSubText");
-    //*[@id="mainProductGrid"]/li[1]/div[1]/div[4]/button[1]
-
-
-
+    private static final By ADD_TO_CART_ITEM = By.className("js-add-to-cart");
 
     private WebElement sortBy;
 
@@ -39,8 +30,9 @@ private static final By ADD_TO_CART_ITEM = By.className("js-add-to-cart");
     public void sort(SortOption sortOption) {
         decorator.handleDropDown(sortBy, RESULT_ITEM, sortOption.value);
     }
-//
+
     public void addLowestToChart() {
+//        decorator.
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
@@ -48,9 +40,6 @@ private static final By ADD_TO_CART_ITEM = By.className("js-add-to-cart");
         }
         driver.findElements(ADD_TO_CART_ITEM).get(0).click();
     }
-
-
-
 
     public enum SortOption {
 

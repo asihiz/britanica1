@@ -40,6 +40,7 @@ public class ShopersalTest extends BaseTest {
         shopersalService.sort(MilkResultsPage.SortOption.FROM_LOW_TO_HIGH);
         shopersalService.addLowestToChart();
         shopersalService.verifyCart(32.00F);
+        shopersalService.removeFromCart();
     }
 
 

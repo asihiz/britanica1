@@ -28,9 +28,6 @@ public class ConnectPage implements Pageable , Preparable, Verifiable {
         connect.click();
     }
 
-
-
-
     @Override
     public String getPageUniqueIdentifier() {
         return "";
