@@ -44,7 +44,7 @@ private static final By ADD_TO_CART_ITEM = By.className("js-add-to-cart");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        driver.findElements(ADD_TO_CART_ITEM).get(0 ).click();
+        driver.findElements(ADD_TO_CART_ITEM).get(0).click();
     }
 
 

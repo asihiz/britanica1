@@ -37,6 +37,6 @@ public class LoginPage implements Pageable {
 
     @Override
     public String getPageUniqueIdentifier() {
-        return "";
+        return "https://www.shufersal.co.il/online/he/login";
     }
 }

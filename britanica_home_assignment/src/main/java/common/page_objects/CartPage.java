@@ -42,6 +42,6 @@ public class CartPage implements Pageable {
 
     @Override
     public String getPageUniqueIdentifier() {
-        return "";
+        return "https://www.shufersal.co.il/online/he/search?q=%D7%97%D7%9C%D7%91:pricePerUnit-asc";
     }
 }
