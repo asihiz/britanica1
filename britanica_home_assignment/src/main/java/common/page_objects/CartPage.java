@@ -1,12 +1,14 @@
 package common.page_objects;
 
 import common.selenium_services.page.Pageable;
+import common.selenium_services.page.Preparable;
+import common.selenium_services.page.Verifiable;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import util.general_util.GeneralUtils;
 
-public class CartPage implements Pageable {
+public class CartPage implements Pageable , Preparable, Verifiable {
 
     private static final By SHIPPING_FEE = By.className("infoSubText");
     private static final By PRICE = By.className("miglog-prod-totalPrize");
@@ -37,7 +39,7 @@ public class CartPage implements Pageable {
 
     @SuppressWarnings("AssertEqualsBetweenInconvertibleTypes")
     public void verifyCartPrice(Float expectedPrice){
-            Assert.assertEquals(java.util.Optional.ofNullable(expectedPrice), java.util.Optional.ofNullable(getPrice() + getShippingFee()));
+            Assert.assertEquals(java.util.Optional.ofNullable(expectedPrice), java.util.Optional.of(getPrice() + getShippingFee()));
     }
 
     @Override

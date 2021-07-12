@@ -2,12 +2,14 @@ package common.page_objects;
 
 import common.building_blocks.ShopersalService;
 import common.selenium_services.page.Pageable;
+import common.selenium_services.page.Preparable;
+import common.selenium_services.page.Verifiable;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
-public class MilkResultsPage implements Pageable {
+public class MilkResultsPage implements Pageable , Preparable, Verifiable {
 
     //    private static final By RESULT_SORT_BY_DDL = By.linkText("מיין לפי:");
     private static final By RESULT_SORT_BY_DDL = By.xpath("//*[@id=\"sortForm1\"]/div/button/span[1]");

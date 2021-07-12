@@ -39,7 +39,7 @@ public class ShopersalTest extends BaseTest {
         shopersalService.search("חלב");
         shopersalService.sort(MilkResultsPage.SortOption.FROM_LOW_TO_HIGH);
         shopersalService.addLowestToChart();
-        shopersalService.verifyCart(32.70F);
+        shopersalService.verifyCart(32.00F);
     }
 
 

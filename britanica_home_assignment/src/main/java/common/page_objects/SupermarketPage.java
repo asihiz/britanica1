@@ -2,11 +2,13 @@ package common.page_objects;
 
 import common.selenium_services.decorator.SeleniumDecorator;
 import common.selenium_services.page.Pageable;
+import common.selenium_services.page.Preparable;
+import common.selenium_services.page.Verifiable;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class SupermarketPage implements Pageable {
+public class SupermarketPage implements Pageable , Preparable, Verifiable {
 
 //    private static final By MILK_PRODUCT_LOCATOR = By.xpath("//*[@id=\"subTileCollapse_A_8\"]/li[3]/a");
       private static final By MILK_PRODUCT_LOCATOR = By.linkText("מוצרי חלב וביצים");

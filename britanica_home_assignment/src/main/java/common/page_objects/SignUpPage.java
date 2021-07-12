@@ -2,6 +2,8 @@ package common.page_objects;
 
 import common.selenium_services.decorator.SeleniumDecorator;
 import common.selenium_services.page.Pageable;
+import common.selenium_services.page.Preparable;
+import common.selenium_services.page.Verifiable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -9,7 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import util.general_util.GeneralUtils;
 import util.general_util.poller.Pollable;
 
-public class SignUpPage implements Pageable, Pollable {
+public class SignUpPage implements Pageable , Preparable, Verifiable , Pollable{
 
     private static final By FIRST_NAME_LOCATOR = By.id("register_firstName");
     private static final By LAST_NAME_LOCATOR = By.id("register_lastName");

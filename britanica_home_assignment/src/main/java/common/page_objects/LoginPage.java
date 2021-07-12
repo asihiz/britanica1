@@ -2,11 +2,13 @@ package common.page_objects;
 
 import common.selenium_services.decorator.SeleniumDecorator;
 import common.selenium_services.page.Pageable;
+import common.selenium_services.page.Preparable;
+import common.selenium_services.page.Verifiable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage implements Pageable {
+public class LoginPage implements Pageable , Preparable, Verifiable {
 
     private static final By USER_NAME_LOCATOR = By.id("j_username");
     private static final By PASSWORD_LOCATOR = By.id("j_password");

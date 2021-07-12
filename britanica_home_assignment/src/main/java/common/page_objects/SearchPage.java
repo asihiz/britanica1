@@ -1,12 +1,14 @@
 package common.page_objects;
 
 import common.selenium_services.page.Pageable;
+import common.selenium_services.page.Preparable;
+import common.selenium_services.page.Verifiable;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
-public class SearchPage implements Pageable {
+public class SearchPage implements Pageable , Preparable, Verifiable {
 
     private static final By SEARCH_LOCATOR = By.id("js-site-search-input");
 

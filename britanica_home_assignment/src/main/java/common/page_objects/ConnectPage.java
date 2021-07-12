@@ -2,11 +2,13 @@ package common.page_objects;
 
 import common.selenium_services.decorator.SeleniumDecorator;
 import common.selenium_services.page.Pageable;
+import common.selenium_services.page.Preparable;
+import common.selenium_services.page.Verifiable;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class ConnectPage implements Pageable {
+public class ConnectPage implements Pageable , Preparable, Verifiable {
 
     private static final By CONNECT_LOCATOR = By.xpath("/html/body/div[29]/div/div/div[3]/a");
 

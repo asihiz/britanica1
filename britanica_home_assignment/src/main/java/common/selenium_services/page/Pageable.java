@@ -11,12 +11,5 @@ public interface Pageable {
 
     WebDriver driver = decorator.getDriver();
 
-    void prepareElements();
-
-    String getPageUniqueIdentifier() ;
-
-//     <T> T getValidate();
-//
-//     <T> T getActivate();
 
 }

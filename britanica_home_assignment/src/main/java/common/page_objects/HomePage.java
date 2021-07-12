@@ -2,13 +2,15 @@ package common.page_objects;
 
 import common.selenium_services.decorator.SeleniumDecorator;
 import common.selenium_services.page.Pageable;
+import common.selenium_services.page.Preparable;
+import common.selenium_services.page.Verifiable;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HomePage implements Pageable {
+public class HomePage implements Pageable , Preparable, Verifiable {
 
 //    private static final By SIGN_UP_LOCATOR = By.xpath("//*[@id=\"contactInner\"]/div/div[2]/ul/li[2]/a\n");
 //    private static final By LOGIN_LOCATOR = By.xpath("//*[@id=\"loginDropdownContainer\"]/button");
